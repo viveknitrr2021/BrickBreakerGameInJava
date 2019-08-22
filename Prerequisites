@@ -1,0 +1,161 @@
+//....Java Swing.....///
+
+
+Java Swing tutorial is a part of Java Foundation Classes (JFC) that is used to 
+create window-based applications. It is built on the top of AWT (Abstract Windowing Toolkit) 
+API and entirely written in java.
+
+Unlike AWT, Java Swing provides platform-independent and lightweight components.
+
+The javax.swing package provides classes for java swing API such as JButton, 
+JTextField, JTextArea, JRadioButton, JCheckbox, JMenu, JColorChooser etc.
+
+
+
+//....Java Awt....//
+
+Java AWT (Abstract Window Toolkit) is an API to develop GUI 
+or window-based applications in java.
+
+Java AWT components are platform-dependent i.e. components are 
+displayed according to the view of operating system. AWT is heavyweight 
+i.e. its components are using the resources of OS.
+
+The java.awt package provides classes for AWT api such as TextField, 
+Label, TextArea, RadioButton, CheckBox, Choice, List etc.
+
+
+
+
+	->AWT								->Swing
+1.AWT stands for Abstract Window Toolkit.		1.Swing is a part of Java Foundation Class (JFC).
+2.AWT components are heavy weight.			2.Swing components are light weight.
+3.AWT components are platform dependent so 		3.Swing components are platform independent so
+  there look and feel changes according to OS.		  there look and feel remains constant.
+4.AWT components are not very good in look 		4.Swing components are better in look and feel 
+  and feel as compared to Swing components.		  as compared to AWT.
+ 
+
+ 
+ 
+
+.............................................................................................................
+1.Super Keyword  in Java....
+
+The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which 
+is referred by super reference variable.
+..........................................................................................................
+
+
+2.java.awt.Color   
+
+The Color class is a part of Java Abstract Window Toolkit(AWT) package. The Color class creates color 
+by using the given RGBA values where RGBA stands for RED, GREEN, BLUE, ALPHA or using HSB value where 
+HSB stands for HUE, SATURATION, BRIcomponents. The value for individual components RGBA ranges 
+from 0 to 255 or 0.0 to 0.1.
+
+...........................................................................................................
+
+3.this keyword in java
+In java, this is a reference variable that refers to the current object.
+...........................................................................................................
+
+4.java.awt.Font
+The Font class states fonts, which are used to render text in a visible way.
+...........................................................................................................
+ 
+
+5. java.awt.Graphics
+
+java.awt.Graphics class provides many methods for graphics programming.
+
+Commonly used methods of Graphics class:
+
+public abstract void drawString(String str, int x, int y): is used to draw the specified string.
+public void drawRect(int x, int y, int width, int height): draws a rectangle with the specified width and height.
+public abstract void fillRect(int x, int y, int width, int height): is used to fill rectangle with the default color and specified width and height.
+public abstract void drawOval(int x, int y, int width, int height): is used to draw oval with the specified width and height.
+public abstract void fillOval(int x, int y, int width, int height): is used to fill oval with the default color and specified width and height.
+public abstract void drawLine(int x1, int y1, int x2, int y2): is used to draw line between the points(x1, y1) and (x2, y2).
+public abstract boolean drawImage(Image img, int x, int y, ImageObserver observer): is used draw the specified image.
+public abstract void drawArc(int x, int y, int width, int height, int startAngle, int arcAngle): is used draw a circular or elliptical arc.
+public abstract void fillArc(int x, int y, int width, int height, int startAngle, int arcAngle): is used to fill a circular or elliptical arc.
+public abstract void setColor(Color c): is used to set the graphics current color to the specified color.
+public abstract void setFont(Font font): is used to set the graphics current font to the specified font.
+......................................................................................................................................................
+
+6.java.awt.Graphics2D
+
+The Graphics2D class extends the Graphics class to provide more sophisticated control over geometry, 
+coordinate transformations, color management, and text layout.
+eg. setting stroke
+.....................................................................................................................................................
+
+7.java.awt.Event.ActionEvent
+
+This class is defined in java.awt.event package. 
+The ActionEvent is generated when button is clicked or the item of a list is double clicked.
+
+....................................................................................................................................................
+
+
+8. Java ActionListener Interface
+
+The Java ActionListener is notified whenever you click on the button or menu item.
+It is notified against ActionEvent. The ActionListener interface is found in java.awt.event package.
+It has only one method: actionPerformed().
+
+The class which processes the ActionEvent should implement this interface.
+The object of that class must be registered with a component. 
+The object can be registered using the addActionListener() method. 
+When the action event occurs, that object's actionPerformed method is invoked.
+...................................................................................................................................................
+
+9.java.awt.Event.KeyEvent
+it's a class.
+On entering the character the Key event is generated.There are three types of key 
+events which are represented by the integer constants. These key events are following
+
+KEY_PRESSED
+KEY_RELASED
+KEY_TYPED
+
+.............................................................................................................................................
+10.
+Java KeyListener Interface
+The Java KeyListener is notified whenever you change the state of key. It is notified against KeyEvent. 
+The KeyListener interface is found in java.awt.event package. It has three methods.
+
+Methods of KeyListener interface
+The signature of 3 methods found in KeyListener interface are given below:
+
+public abstract void keyPressed(KeyEvent e);  
+public abstract void keyReleased(KeyEvent e);  
+public abstract void keyTyped(KeyEvent e);
+
+The class which processes the KeyEvent should implement this interface.
+The object of that class must be registered with a component. 
+The object can be registered using the addKeyListener() method. 
+.........................................................................................................................................
+
+11.
+Java JPanel
+The JPanel is a simplest container class. It provides space in which an application can attach any other component.
+It inherits the JComponents class.
+It doesn't have title bar.
+
+in our project  
+public class Gameplay extends JPanel implements KeyListener, ActionListener
+since interfaces need to be implemented and Japnel class we have to inherit.
+
+.................................................................................................................................
+
+12.
+java.swing.Timer
+
+javax.swing.Timer can only be used in Swing applications.
+javax.swing.Timer is a more appropriate choice over java.util.Timer for Swing applications.
+javax.swing.Timer handles thread sharing.
+You implement the java.awt.event.ActionListener interface and write your task code in its actionPerformed method.
+To cancel a task, you use the javax.swing.Timer class's stop method.
